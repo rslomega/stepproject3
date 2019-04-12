@@ -1,0 +1,3 @@
+mocha
+chai
+chai-as-promised

@@ -1,0 +1,7 @@
+  "scripts": {
+     "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "gulp dev",
+    "build": "gulp build",
+  "develop": "webpack-dev-server --mode development --open",
+     "dist": "webpack --mode production"
+  },
