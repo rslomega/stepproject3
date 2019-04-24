@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set filelist=_common_module_list.txt
+set filelist=_init_common_list.txt
 
 cmd /c npm init
 set x=0

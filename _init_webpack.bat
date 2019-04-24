@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set filelist=_gulp_module_list.txt
+set filelist=_init_webpack_list.txt
 
 cmd /c npm init
 set x=0
