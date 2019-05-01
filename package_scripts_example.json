@@ -4,4 +4,4 @@
     "build": "gulp build",
   "develop": "webpack-dev-server --mode development --open",
      "dist": "webpack --mode production"
-  },
+    },
