@@ -1,5 +1,11 @@
+//try
 'use strict';
-let urlAdd = 'http://localhost:3000/add';
+let urls = [
+    'http://localhost:3000/add',
+    'http://localhost:3000/add',
+    'http://localhost:3000/add',
+  ];
+
 
 let textarea = document.getElementById("textNote");
 let btn = document.getElementById("btn");
@@ -9,7 +15,18 @@ btn.addEventListener( "click", addUser);
 
 
 function addUser(){
-    axios.get(urlAdd)
+    Promise.all(
+        urls.map(elem=>{
+          return new Promise((resolve,reject)=>{
+            axios.get(elem).then(result=>{resolve(result)}).catch(e=>{console.log('error')})
+          })
+        })
+      ).then(res=>{console.log(res)}).catch(e=>{console.log('error')})
+    console.log(textarea.value);
+}
+
+
+axios.get('http://localhost:3000/showUsers')
 .then(function (response) {
     console.log(response);
     response.data.forEach(function(item){
@@ -27,14 +44,3 @@ function addUser(){
 .then(function () {
     // always executed
 });
-}
-
-
-
-
-
-
-
-
-
-
