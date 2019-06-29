@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
+  "develop": "webpack-dev-server --mode development --open",
+     "dist": "webpack --mode production"
   },
   "repository": {
     "type": "git",
